@@ -11,18 +11,28 @@
         p.subtitle { font-size: 1.1rem; color: #bbbbbb; margin: 8px 0 25px 0; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; }
         p.about-text { max-width: 600px; font-size: 1.05rem; color: #aaaaaa; line-height: 1.6; margin: 0; font-weight: 400; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto; }
-        .project { background: #0a0a0a; border: 1px solid #111111; padding: 0; overflow: hidden; }
+        .project { background: #0a0a0a; border: 1px solid #111111; padding: 0; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; }
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #050505; }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-        .meta { padding: 25px; }
+        .meta { padding: 25px; flex-grow: 1; }
         .meta h3 { margin: 0 0 8px 0; font-size: 1.25rem; font-weight: 600; letter-spacing: -0.5px; }
         .meta p { margin: 0; color: #666666; font-size: 0.95rem; font-weight: 400; }
+        
+        /* === PROPRIETARY SAAS SPOTLIGHT CARD === */
+        .saas-card { background: #07070d; border: 1px solid #4f46e5; padding: 30px; box-sizing: border-box; }
+        .saas-card .badge { display: inline-block; background: #4f46e5; color: #ffffff; font-size: 0.7rem; font-weight: 900; padding: 4px 10px; border-radius: 4px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 20px; }
+        .saas-card h2 { margin: 0 0 12px 0; font-size: 1.6rem; font-weight: 700; letter-spacing: -0.5px; color: #ffffff; }
+        .saas-card p.saas-desc { margin: 0 0 24px 0; color: #aaaaaa; font-size: 0.98rem; line-height: 1.6; font-weight: 400; }
+        .saas-features { margin: 0 0 30px 0; padding: 0; list-style: none; space-y: 10px; }
+        .saas-features li { color: #cccccc; font-size: 0.88rem; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; line-height: 1.4; }
+        .saas-features li strong { color: #ffffff; }
+        .saas-btn { display: block; text-align: center; background: #4f46e5; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 0.9rem; padding: 14px; transition: background 0.2s ease; border-radius: 6px; letter-spacing: 0.5px; }
+        .saas-btn:hover { background: #4338ca; }
         
         /* Markalar Bölümü */
         .trusted-section { max-width: 1200px; margin: 100px auto 60px auto; border-top: 1px solid #111111; padding-top: 60px; }
         .trusted-section h4 { margin: 0 0 30px 0; font-size: 0.9rem; color: #444444; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; }
         .brand-grid { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; opacity: 0.4; filter: grayscale(100%) brightness(200%); }
-        /* Gelecekte logo eklemek istersen buraya <img> etiketleri gelecek */
         
         footer { max-width: 1200px; margin: 100px auto 40px auto; border-top: 1px solid #111111; padding-top: 40px; color: #666666; font-size: 0.95rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
         footer .links a { color: #ffffff; text-decoration: none; margin-left: 25px; border-bottom: 1px solid transparent; transition: border 0.2s ease; }
@@ -34,6 +44,7 @@
             .grid { grid-template-columns: 1fr; gap: 30px; }
             h1 { font-size: 2.2rem; }
             footer { flex-direction: column; align-items: flex-start; gap: 15px; }
+            .saas-card { min-height: auto; }
         }
     </style>
 </head>
@@ -48,6 +59,22 @@
     </header>
 
     <main class="grid">
+        <div class="project saas-card">
+            <div>
+                <div class="badge">Proprietary Software</div>
+                <h2>PanoHub Pipeline</h2>
+                <p class="saas-desc">
+                    10 yılı aşkın video prodüksiyon sektörü deneyimimi ve kendi stüdyomuzda yürüttüğümüz 2 yıllık aralıksız saha testlerini tek bir sızdırmaz iş akışı motorunda topladım. Kreatif ekipler ve video ajansları için operasyonel kaos bitti.
+                </p>
+                <ul class="saas-features">
+                    <li>🟢 <strong>Multi-Tenant İzolasyon:</strong> Personel ve müşteri veri sızıntılarını sıfırlayan altyapı.</li>
+                    <li>🟢 <strong>Lokal OS Otomasyonu:</strong> Tek tıkla otomatik şablon klasör hiyerarşisi oluşturma.</li>
+                    <li>🟢 <strong>Gelişmiş Alarm Motoru:</strong> Teslim süreleri için yerel işletim sistemi seviyesinde uyarılar.</li>
+                </ul>
+            </div>
+            <a href="https://app.beratdemirtas.com" target="_blank" class="saas-btn">Sistemi İnceleyin & Ücretsiz Deneyin</a>
+        </div>
+
         <div class="project">
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_1?rel=0&modestbranding=1" allowfullscreen></iframe>
@@ -72,7 +99,7 @@
     <section class="trusted-section">
         <h4>Collaborations & Trusted By</h4>
         <div class="brand-grid">
-            <span style="color: #444; font-size: 0.9.rem; letter-spacing: 1px;">Corporate Projects & Brands Portfolio</span>
+            <span style="color: #444; font-size: 0.9rem; letter-spacing: 1px;">Corporate Projects & Brands Portfolio</span>
         </div>
     </section>
 
