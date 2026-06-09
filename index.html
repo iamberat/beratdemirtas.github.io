@@ -5,19 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Berat Demirtaş | Director & Video Professional</title>
     <style>
-        body { background-color: #000000; color: #ffffff; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; padding: 40px; }
-        header { max-width: 1200px; margin: 0 auto 60px auto; }
-        h1 { font-size: 2.5rem; font-weight: 700; letter-spacing: -1px; margin: 0; }
-        p.subtitle { font-size: 1.1rem; color: #888888; margin: 5px 0 0 0; }
+        body { background-color: #000000; color: #ffffff; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; padding: 40px; -webkit-font-smoothing: antialiased; }
+        header { max-width: 1200px; margin: 40px auto 60px auto; }
+        h1 { font-size: 2.8rem; font-weight: 700; letter-spacing: -1px; margin: 0; }
+        p.subtitle { font-size: 1.2rem; color: #888888; margin: 5px 0 25px 0; font-weight: 300; text-transform: uppercase; letter-spacing: 1px; }
+        p.about-text { max-width: 600px; font-size: 1.05rem; color: #aaaaaa; line-height: 1.6; margin: 0; font-weight: 400; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto; }
-        .project { background: #0a0a0a; border: 1px solid #1a1a1a; padding: 0; overflow: hidden; }
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+        .project { background: #0a0a0a; border: 1px solid #111111; padding: 0; overflow: hidden; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #050505; }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-        .meta { padding: 20px; }
-        .meta h3 { margin: 0 0 5px 0; font-size: 1.2rem; }
-        .meta p { margin: 0; color: #666666; font-size: 0.9rem; }
-        footer { max-width: 1200px; margin: 80px auto 0 auto; border-top: 1px solid #1a1a1a; padding-top: 40px; color: #888888; }
-        footer a { color: #ffffff; text-decoration: none; }
+        .meta { padding: 25px; }
+        .meta h3 { margin: 0 0 8px 0; font-size: 1.25rem; font-weight: 600; letter-spacing: -0.5px; }
+        .meta p { margin: 0; color: #666666; font-size: 0.95rem; font-weight: 400; }
+        
+        /* Markalar Bölümü */
+        .trusted-section { max-width: 1200px; margin: 100px auto 60px auto; border-top: 1px solid #111111; padding-top: 60px; }
+        .trusted-section h4 { margin: 0 0 30px 0; font-size: 0.9rem; color: #444444; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; }
+        .brand-grid { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; opacity: 0.4; filter: grayscale(100%) brightness(200%); }
+        /* Gelecekte logo eklemek istersen buraya <img> etiketleri gelecek */
+        
+        footer { max-width: 1200px; margin: 100px auto 40px auto; border-top: 1px solid #111111; padding-top: 40px; color: #666666; font-size: 0.95rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+        footer .links a { color: #ffffff; text-decoration: none; margin-left: 25px; border-bottom: 1px solid transparent; transition: border 0.2s ease; }
+        footer .links a:hover { border-bottom: 1px solid #ffffff; }
+        footer .links a:first-child { margin-left: 0; }
+        
+        @media (max-width: 768px) {
+            body { padding: 20px; }
+            .grid { grid-template-columns: 1fr; gap: 30px; }
+            h1 { font-size: 2.2rem; }
+            footer { flex-direction: column; align-items: flex-start; gap: 15px; }
+        }
     </style>
 </head>
 <body>
@@ -25,6 +42,9 @@
     <header>
         <h1>BERAT DEMİRTAŞ</h1>
         <p class="subtitle">Director & Video Professional</p>
+        <p class="about-text">
+            Markaların vizyonunu, yüksek prodüksiyon kalitesi ve stratejik kurgu diliyle geleceğe taşıyan kreatif partner. Sinematik hikaye anlatımı, kurumsal reklam yönetmenliği ve uçtan uca post-prodüksiyon çözümleri.
+        </p>
     </header>
 
     <main class="grid">
@@ -33,7 +53,7 @@
                 <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_1?rel=0&modestbranding=1" allowfullscreen></iframe>
             </div>
             <div class="meta">
-                <h3>Proje Adı Veya Marka 1</h3>
+                <h3>Seçilmiş Proje / Marka Filmi I</h3>
                 <p>Role: Director / Editor / Colorist</p>
             </div>
         </div>
@@ -43,14 +63,25 @@
                 <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_2?rel=0&modestbranding=1" allowfullscreen></iframe>
             </div>
             <div class="meta">
-                <h3>Proje Adı Veya Marka 2</h3>
+                <h3>Seçilmiş Proje / Marka Filmi II</h3>
                 <p>Role: Director / Editor / Colorist</p>
             </div>
         </div>
     </main>
 
+    <section class="trusted-section">
+        <h4>Collaborations & Trusted By</h4>
+        <div class="brand-grid">
+            <span style="color: #444; font-size: 0.9.rem; letter-spacing: 1px;">Corporate Projects & Brands Portfolio</span>
+        </div>
+    </section>
+
     <footer>
-        <p>Contact: <a href="mailto:hello@beratdemirtas.com">hello@beratdemirtas.com</a></p>
+        <p>&copy; 2026 Berat Demirtaş. All rights reserved.</p>
+        <div class="links">
+            <a href="mailto:hello@beratdemirtas.com">hello@beratdemirtas.com</a>
+            <a href="https://linkedin.com/in/KULLANICI_ADIN" target="_blank">LinkedIn</a>
+        </div>
     </footer>
 
 </body>
